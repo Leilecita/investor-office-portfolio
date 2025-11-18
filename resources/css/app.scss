@@ -1,0 +1,118 @@
+@import "variables";
+
+/* Bulma Checkbox */
+
+@import "./node_modules/bulma/bulma.sass";
+@import "~bulma-o-steps";
+@import "~bulma-checkradio";
+
+/* navbar */
+#navbar a.navbar-item {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: $grey-light;
+  font-size: 0.7rem;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $white;
+    background: transparent;
+  }
+}
+
+/* admin */
+@include desktop {
+  #admin {
+    display: flex;
+
+    > #sidebar {
+      width: 300px;
+      flex-grow: 0;
+      box-shadow: none;
+    }
+    > #content {
+      flex-grow: 1;
+      max-width: calc(100% - 300px);
+    }
+  }
+}
+
+/* **** */
+
+.autocomplete {
+  position: relative;
+
+  ul.match-list {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    background-color: $light;
+
+    > li {
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+
+      &:hover, &:focus {
+        background-color: $primary;
+      }
+    }
+  }
+}
+.paso {
+  margin-bottom: 3rem;
+}
+.checkbox {
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+
+
+
+
+.input {
+  border: 1px solid rgb(235, 233, 233);
+}
+
+.label {
+  color: rgb(145, 143, 143);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding-left: 4px;
+  padding-bottom: 1px;
+  padding-top: 2px;
+}
+
+.line {
+  height: 0.4px;
+  border-width: 0;
+  color: rgb(145, 143, 143);
+  background-color: gray;
+  margin-bottom: 10px;
+}
+
+.form {
+  align-content: center;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  margin: 0.5rem 0;
+  background-color: rgb(231, 231, 231);
+}
+
+.titulo-info {
+  /*font-family: 'Roboto', sans-serif;*/
+  font-weight: 400;
+  padding-left: 4px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.titulo {
+  align-content: center;
+  text-align: center;
+  /*font-family: 'Roboto', sans-serif;*/
+  font-weight: 600;
+  padding-left: 8px;
+  padding-bottom: 1px;
+  padding-top: 2px;
+}
